@@ -10,6 +10,7 @@ class AppAuth() {
 
     private val properties = Properties.properties()
 
+    // Send a POST request to the OAuth2 endpoint to obtain the access token
     fun token(): String {
 
         val results =
@@ -20,8 +21,10 @@ class AppAuth() {
                 .formParam("client_secret", properties.clientSecret)
                 .post("https://meta.wikimedia.org/w/rest.php/oauth2/access_token")
 
+        // Parse the response body to obtain the access token
         val response = JSONObject(results.body.prettyPrint())
 
+        // Return the access token
         return response["access_token"].toString()
     }
 }

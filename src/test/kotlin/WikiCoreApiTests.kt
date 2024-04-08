@@ -4,7 +4,6 @@ import com.example.project.api.ApiClient
 import org.hamcrest.Matchers.*
 import org.json.JSONObject
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import java.text.SimpleDateFormat
